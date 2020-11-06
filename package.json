@@ -1,0 +1,28 @@
+{
+  "name": "nodejs_fm",
+  "version": "1.0.0",
+  "description": "ISS nodejs backend application for friend management assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkchoo90/nodejs_fm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tkchoo90/nodejs_fm/issues"
+  },
+  "homepage": "https://github.com/tkchoo90/nodejs_fm#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
