@@ -1,33 +1,26 @@
 require("dotenv").config();
-const mysql = require("mysql");
 const express = require("express");
 const bodyParser = require("body-parser");
-const dbcontext = require("./sqlconnection");
-const friendsRoutes = require("./routers/friends.router");
+const bookRoutes = require("./routers/bookRouter");
 const path = require("path");
 const cors = require("cors");
 
-
-
-
-
+//DB connection
+require("./models/db");
 
 const app = express();
 
 /***************  MIDDLEWARES   ********************/
 app.use(cors());
 app.use(bodyParser.json());
-app.use("/friends", friendsRoutes);
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use("/books", bookRoutes);
 
-app.get("/", (req, res) =>{
-    res.send("Hello World!");
+app.get("/", (req, res) => {
+  res.send("Hello Homepage!");
 });
 
-app.get("/2", (req, res) =>{
-    res.send("Hello again!!");
+// localhost:3000/
+app.listen(process.env.PORT, () => {
+  console.log(`Server is running at port ${process.env.PORT}`);
 });
-
-app.listen(process.env.PORT, () =>{
-    console.log("Server running at port 3000");
-})
-
