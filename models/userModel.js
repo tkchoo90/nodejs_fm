@@ -1,8 +1,10 @@
 const mongoose = require("mongoose");
 
 const schema = new mongoose.Schema({
-  id: { type: String, required: true },
   email: {type: String},
+  friends: [{type: String}],
+  block: [[{type: String}]],
+  subscribe: [[{type: String}]],
 });
 
 // (Model Name, Schema object, Collection Name)
