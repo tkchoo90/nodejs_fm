@@ -1,0 +1,55 @@
+################################# Main landing page #################################
+GET http://localhost:3000/user/test
+
+################################# Create New User #################################
+POST http://localhost:3000/user/create
+Content-Type: application/json
+
+{
+    "useremail":"124@mailinator.com"
+}
+
+#################################### Get user #################################
+GET http://localhost:3000/user/all
+Content-Type: application/json
+
+{
+    "useremail":"123@mailinator.com"
+}
+
+################################# Add friend #################################
+POST http://localhost:3000/user/add
+Content-Type: : application/json
+
+{
+    "useremail":"123@mailinator.com",
+    "friendemail": "124@mailinator.com"
+}
+
+################################# Block friend #################################
+POST http://localhost:3000/user/block
+Content-Type: : application/json
+
+{
+    "useremail":"123@mailinator.com",
+    "friendemail": "123@mailinator.com"
+}
+
+
+################################# Subscribe friend #################################
+POST http://localhost:3000/user/sub
+Content-Type: : application/json
+
+{
+    "useremail":"123@mailinator.com",
+    "friendemail": "123@mailinator.com"
+}
+
+################################# Get list of friends who can receive updates #################################
+GET http://localhost:3000/user/updatelist
+Content-Type: application/json
+
+{
+    "useremail":"123@mailinator.com"
+}
+
